@@ -15,7 +15,28 @@
     </nav>
 </header>
 <body>
-    
+    <form action="/process-contact" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="interests">Category Interests:</label><br>
+        <input type="checkbox" id="interests1" name="interests" value="industry"> Industry<br>
+        <input type="checkbox" id="interests2" name="interests" value="technical"> Technical<br>
+        <input type="checkbox" id="interests3" name="interests" value="career"> Career<br><br>
+
+        <label for="role">Role:</label><br>
+        <input id="role1" name="role" value="1" type="radio" />
+        <label for="role1">Writer</label><br>
+        <input id="role2" name="role" value="2" type="radio" />
+        <label for="role2">Contributor</label><br>
+        <input id="role3" name="role" value="3" type="radio" />
+        <label for="role3">Administrator</label><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
 </body>
 <footer>
     <p>By accepting cookies, you agree to our use of cookies.</p>
