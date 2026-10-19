@@ -70,3 +70,26 @@ container_cookie.addEventListener("click", (e) => {
     showOriginal();
   }
 });
+
+
+//Function to handle reading assistance toggle
+const readingToggle = document.querySelector("#reading-toggle");
+
+function toggleReadingAssist() {
+    const on = document.body.classList.toggle("reading-assist");
+    //Sets the aria-pressed attribute to true or false based on the state of the reading assist
+    readingToggle.setAttribute("aria-pressed", on);
+}
+
+readingToggle.addEventListener("click", toggleReadingAssist);
+
+
+//Function to handle reading assistance toggle using Ctrl + A
+document.addEventListener("keydown", (e) => {
+  if (e.ctrlKey && e.key.toLowerCase() === "a") {
+    const tag = e.target.tagName;
+    //prevents ctrl + a from selecting all text
+    e.preventDefault();
+    toggleReadingAssist();
+  }
+});

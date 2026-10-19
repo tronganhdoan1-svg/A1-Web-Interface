@@ -1,0 +1,21 @@
+body.reading-assist {
+    background: #000;
+    color: #fff;
+    line-height: 1.8;
+    letter-spacing: 0.08em;
+}
+body.reading-assist a { color: #ffff00; }
+body.reading-assist header,
+body.reading-assist main,
+body.reading-assist section,
+body.reading-assist article,
+body.reading-assist footer {
+    background: #000;
+    color: #fff;
+    padding: 1.5rem;
+}
+body.reading-assist button {
+    background: #fff;
+    color: #000;
+    border: 2px solid #ffff00;
+}
