@@ -16,8 +16,7 @@
             <li><a href="./contact.html">Contact</a></li>
         </ul>
     </nav>
-    <!-- The aria-pressed attribute is used to indicate whether the button is currently pressed. -->
-    <button type="button" id="reading-toggle" aria-pressed="false">Reading Assistance</button>
+    <input type="button" id="reading-toggle" value="Reading Assistance">
 </header>
 <body>
     <section>
@@ -104,7 +103,9 @@
         <div id="visitor-table"></div>
     </section>
 </body>
-<script src="js/main.js" defer></script> <!-- Got it from this https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event -->
+<script src="js/main.js" defer></script> 
+<!-- Got 'defer' from this https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event -->
+<!-- Defer makes sure the script runs after the HTML is fully loaded and prevent DOMContentLoaded issues.-->
 <footer>
     <div id="cookie-banner">
         <p>We use cookies to remember your preferences and understand how visitors use our site.</p>

@@ -76,9 +76,7 @@ container_cookie.addEventListener("click", (e) => {
 const readingToggle = document.querySelector("#reading-toggle");
 
 function toggleReadingAssist() {
-    const on = document.body.classList.toggle("reading-assist");
-    //Sets the aria-pressed attribute to true or false based on the state of the reading assist
-    readingToggle.setAttribute("aria-pressed", on);
+    document.body.classList.toggle("reading-assist");
 }
 
 readingToggle.addEventListener("click", toggleReadingAssist);
