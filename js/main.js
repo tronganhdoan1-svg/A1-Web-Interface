@@ -29,3 +29,44 @@ container.appendChild(table);
 }
 
 buildVisitorTable();
+
+
+//Function to handle cookie banner
+const container_cookie = document.querySelector("#cookie-banner");
+
+// Function to show the original state of the cookie banner, which clears the container and adds the original text and link
+function showOriginal() {
+    container_cookie.innerHTML = ""; // Clear the container
+    const banner = document.createElement("p");
+    banner.textContent = `We use cookies to remember your preferences and understand how visitors use our site.`;
+    const acceptLink = document.createElement("a");
+    acceptLink.setAttribute("id", "accept-cookies");
+    acceptLink.href = "#";
+    acceptLink.textContent = "Accept Cookies";
+    container_cookie.appendChild(banner);
+    container_cookie.appendChild(acceptLink);
+    }
+
+
+// Function to show the accepted state, identical to showOriginal but with different text and link
+function showAccepted() {
+    container_cookie.innerHTML = ""; // Clear the container
+    const banner = document.createElement("p");
+    banner.textContent = `Cookies were accepted. Would you like to revoke?`;
+    const revokeLink = document.createElement("a");
+    revokeLink.setAttribute("id", "revoke-cookies");
+    revokeLink.href = "#";
+    revokeLink.textContent = "Revoke Cookies";
+    container_cookie.appendChild(banner);
+    container_cookie.appendChild(revokeLink);
+}
+
+container_cookie.addEventListener("click", (e) => {
+  if (e.target.id === "accept-cookies") {
+    e.preventDefault();
+    showAccepted();
+  } else if (e.target.id === "revoke-cookies") {
+    e.preventDefault();
+    showOriginal();
+  }
+});
