@@ -92,24 +92,20 @@
     <section>
     <h2>Watch</h2>
         <video controls width="600">
-            <source src="./Amiya.mp4" type="video/mp4"/>
+            <source src="./videos/Amiya.mp4" type="video/mp4"/>
         </video>
     </section>
     <br>
     <section>
         <h2>Site Traffic</h2>
-        <table border="1">
-            <tr><td>April 2026</td><td>12,480</td></tr>
-            <tr><td>May 2026</td><td>13,915</td></tr>
-            <tr><td>June 2026</td><td>11,302</td></tr>
-            <tr><td>July 2026</td><td>15,760</td></tr>
-            <tr><td>August 2026</td><td>17,044</td></tr>
-            <tr><td>September 2026</td><td>18,629</td></tr>
-        </table>
-        </section>
+        <div id="visitor-table"></div>
+    </section>
 </body>
+<script src="js/main.js" defer></script> <!-- Got it from this https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event -->
 <footer>
-    <p>By accepting cookies, you agree to our use of cookies.</p>
-    <a href="#">Accept Cookies</a> 
+    <div id="cookie-banner">
+        <p>We use cookies to remember your preferences and understand how visitors use our site.</p>
+        <a href="#" id="accept-cookies">Accept Cookies</a>
+    </div>
 </footer>
 </html>
